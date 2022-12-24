@@ -1,0 +1,10 @@
+D:\.NET\JobProject\DAL\bin\Debug\DAL.dll.config
+D:\.NET\JobProject\DAL\bin\Debug\DAL.dll
+D:\.NET\JobProject\DAL\bin\Debug\DAL.pdb
+D:\.NET\JobProject\DAL\bin\Debug\EntityFramework.dll
+D:\.NET\JobProject\DAL\bin\Debug\EntityFramework.xml
+D:\.NET\JobProject\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+D:\.NET\JobProject\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+D:\.NET\JobProject\DAL\obj\Debug\DAL.csproj.CopyComplete
+D:\.NET\JobProject\DAL\obj\Debug\DAL.dll
+D:\.NET\JobProject\DAL\obj\Debug\DAL.pdb

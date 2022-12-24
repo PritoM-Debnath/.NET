@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="JOBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="JobProvider">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Designation" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="JobVacancies" Relationship="Self.FK_JobVacancy_JobProvider" FromRole="JobProvider" ToRole="JobVacancy" />
+  </EntityType>
+  <EntityType Name="JobSeeker">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Uname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Pass" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Fname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Mail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CurrentOccupation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Portfolios" Relationship="Self.FK_Portfolio_JobSeeker" FromRole="JobSeeker" ToRole="Portfolio" />
+  </EntityType>
+  <EntityType Name="JobVacancy">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="JobType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JobDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Salary" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="RequiredSkills" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JobLocType" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Vacancy" Type="Int32" Nullable="false" />
+    <Property Name="JobProviderId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="JobProvider" Relationship="Self.FK_JobVacancy_JobProvider" FromRole="JobVacancy" ToRole="JobProvider" />
+  </EntityType>
+  <EntityType Name="Portfolio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Skills" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Expertise" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Experience" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Projects" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExtraCurrActivities" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="JobSeekerId" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="JobSeeker" Relationship="Self.FK_Portfolio_JobSeeker" FromRole="Portfolio" ToRole="JobSeeker" />
+  </EntityType>
+  <Association Name="FK_JobVacancy_JobProvider">
+    <End Role="JobProvider" Type="Self.JobProvider" Multiplicity="1" />
+    <End Role="JobVacancy" Type="Self.JobVacancy" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobProvider">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="JobVacancy">
+        <PropertyRef Name="JobProviderId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Portfolio_JobSeeker">
+    <End Role="JobSeeker" Type="Self.JobSeeker" Multiplicity="1" />
+    <End Role="Portfolio" Type="Self.Portfolio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="JobSeeker">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Portfolio">
+        <PropertyRef Name="JobSeekerId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="JOBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="JobProviders" EntityType="Self.JobProvider" />
+    <EntitySet Name="JobSeekers" EntityType="Self.JobSeeker" />
+    <EntitySet Name="JobVacancies" EntityType="Self.JobVacancy" />
+    <EntitySet Name="Portfolios" EntityType="Self.Portfolio" />
+    <AssociationSet Name="FK_JobVacancy_JobProvider" Association="Self.FK_JobVacancy_JobProvider">
+      <End Role="JobProvider" EntitySet="JobProviders" />
+      <End Role="JobVacancy" EntitySet="JobVacancies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Portfolio_JobSeeker" Association="Self.FK_Portfolio_JobSeeker">
+      <End Role="JobSeeker" EntitySet="JobSeekers" />
+      <End Role="Portfolio" EntitySet="Portfolios" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="JOBModelStoreContainer" CdmEntityContainer="JOBEntities">
+    <EntitySetMapping Name="JobProviders">
+      <EntityTypeMapping TypeName="JOBModel.JobProvider">
+        <MappingFragment StoreEntitySet="JobProvider">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="Designation" ColumnName="Designation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobSeekers">
+      <EntityTypeMapping TypeName="JOBModel.JobSeeker">
+        <MappingFragment StoreEntitySet="JobSeeker">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Uname" ColumnName="Uname" />
+          <ScalarProperty Name="Pass" ColumnName="Pass" />
+          <ScalarProperty Name="Fname" ColumnName="Fname" />
+          <ScalarProperty Name="Lname" ColumnName="Lname" />
+          <ScalarProperty Name="Mail" ColumnName="Mail" />
+          <ScalarProperty Name="CurrentOccupation" ColumnName="CurrentOccupation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobVacancies">
+      <EntityTypeMapping TypeName="JOBModel.JobVacancy">
+        <MappingFragment StoreEntitySet="JobVacancy">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="JobType" ColumnName="JobType" />
+          <ScalarProperty Name="JobDescription" ColumnName="JobDescription" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="RequiredSkills" ColumnName="RequiredSkills" />
+          <ScalarProperty Name="JobLocType" ColumnName="JobLocType" />
+          <ScalarProperty Name="Vacancy" ColumnName="Vacancy" />
+          <ScalarProperty Name="JobProviderId" ColumnName="JobProviderId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Portfolios">
+      <EntityTypeMapping TypeName="JOBModel.Portfolio">
+        <MappingFragment StoreEntitySet="Portfolio">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Skills" ColumnName="Skills" />
+          <ScalarProperty Name="Expertise" ColumnName="Expertise" />
+          <ScalarProperty Name="Experience" ColumnName="Experience" />
+          <ScalarProperty Name="Projects" ColumnName="Projects" />
+          <ScalarProperty Name="ExtraCurrActivities" ColumnName="ExtraCurrActivities" />
+          <ScalarProperty Name="JobSeekerId" ColumnName="JobSeekerId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
