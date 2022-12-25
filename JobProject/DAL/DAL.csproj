@@ -76,6 +76,9 @@
     <Compile Include="EF\Portfolio.cs">
       <DependentUpon>JOB.tt</DependentUpon>
     </Compile>
+    <Compile Include="EF\Token.cs">
+      <DependentUpon>JOB.tt</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\IAuth.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +86,7 @@
     <Compile Include="Repo\JobSeekerRepo.cs" />
     <Compile Include="Repo\JobVacancyrepo.cs" />
     <Compile Include="Repo\PortfolioRepo.cs" />
+    <Compile Include="Repo\TokenRepo.cs" />
   </ItemGroup>
   <ItemGroup>
     <EntityDeploy Include="EF\JOB.edmx">

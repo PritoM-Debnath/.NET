@@ -11,6 +11,7 @@
         <EntityTypeShape EntityType="JOBModel.Portfolio" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
         <AssociationConnector Association="JOBModel.FK_JobVacancy_JobProvider" ManuallyRouted="false" />
         <AssociationConnector Association="JOBModel.FK_Portfolio_JobSeeker" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="JOBModel.Token" Width="1.5" PointX="5.375" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

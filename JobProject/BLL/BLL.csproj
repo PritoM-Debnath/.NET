@@ -47,10 +47,14 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DTO\JobProviderDTO.cs" />
+    <Compile Include="DTO\JobProviderTokenDTO.cs" />
     <Compile Include="DTO\JobSeekerDTO.cs" />
+    <Compile Include="DTO\JobSeekerTokenDTO.cs" />
     <Compile Include="DTO\JobVacancyDTO.cs" />
     <Compile Include="DTO\PortfolioDTO.cs" />
+    <Compile Include="DTO\TokenDTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\AuthService.cs" />
     <Compile Include="Services\JobProviderService.cs" />
     <Compile Include="Services\JobSeekerService.cs" />
     <Compile Include="Services\JobVacancyService.cs" />

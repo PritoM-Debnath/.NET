@@ -90,5 +90,16 @@
       <End Role="JobSeeker" EntitySet="JobSeekers" />
       <End Role="Portfolio" EntitySet="Portfolios" />
     </AssociationSet>
+    <EntitySet Name="Tokens" EntityType="JOBModel.Token" />
   </EntityContainer>
+  <EntityType Name="Token">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="AccessToken" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CreatedAt" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="ExpiredAt" Type="DateTime" Precision="3" />
+  </EntityType>
 </Schema>

@@ -29,5 +29,6 @@ namespace DAL.EF
         public DbSet<JobSeeker> JobSeekers { get; set; }
         public DbSet<JobVacancy> JobVacancies { get; set; }
         public DbSet<Portfolio> Portfolios { get; set; }
+        public DbSet<Token> Tokens { get; set; }
     }
 }

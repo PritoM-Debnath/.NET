@@ -1,16 +1,19 @@
 ﻿using BLL.DTO;
 using BLL.Services;
+using JobProject.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Web.Http;
 
 namespace JobProject.Controllers
 {
     public class JobProviderController : ApiController
     {
+        [CustomAuth]
         [Route("api/jobproviders")]
         [HttpGet]
         public HttpResponseMessage Get()

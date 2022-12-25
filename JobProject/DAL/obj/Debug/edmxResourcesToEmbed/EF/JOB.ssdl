@@ -49,6 +49,16 @@
     <Property Name="ExtraCurrActivities" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="JobSeekerId" Type="int" Nullable="false" />
   </EntityType>
+  <EntityType Name="Token">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="int" Nullable="false" />
+    <Property Name="AccessToken" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CreatedAt" Type="datetime" Nullable="false" />
+    <Property Name="ExpiredAt" Type="datetime" />
+  </EntityType>
   <Association Name="FK_JobVacancy_JobProvider">
     <End Role="JobProvider" Type="Self.JobProvider" Multiplicity="1" />
     <End Role="JobVacancy" Type="Self.JobVacancy" Multiplicity="*" />
@@ -78,6 +88,7 @@
     <EntitySet Name="JobSeeker" EntityType="Self.JobSeeker" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="JobVacancy" EntityType="Self.JobVacancy" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Portfolio" EntityType="Self.Portfolio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Token" EntityType="Self.Token" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK_JobVacancy_JobProvider" Association="Self.FK_JobVacancy_JobProvider">
       <End Role="JobProvider" EntitySet="JobProvider" />
       <End Role="JobVacancy" EntitySet="JobVacancy" />

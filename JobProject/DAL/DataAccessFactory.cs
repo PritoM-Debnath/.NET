@@ -15,7 +15,11 @@ namespace DAL
         {
             return new JobSeekerRepo();
         }
-        public static IAuth AuthDataAccess()
+        public static IAuth<JobProvider, bool> JobProviderAuthDataAccess()
+        {
+            return new JobProviderRepo();
+        }
+        public static IAuth<JobSeeker, bool> JobSeekerAuthDataAccess()
         {
             return new JobSeekerRepo();
         }

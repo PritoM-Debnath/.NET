@@ -1,4 +1,5 @@
 ﻿using DAL.EF;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,8 +8,10 @@ using System.Threading.Tasks;
 
 namespace DAL.Interfaces
 {
-    public interface IAuth
+    public interface IAuth<CLASS, RESULT>
     {
-        JobSeeker Authenticate (string username, string password);
+        Token Authenticate (CLASS obj);
+        bool IsAuthenticated(string token);
+        bool Logout(string token);
     }
 }
