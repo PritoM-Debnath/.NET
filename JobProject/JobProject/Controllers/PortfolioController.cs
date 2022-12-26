@@ -104,5 +104,12 @@ namespace JobProject.Controllers
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
         }
+        [Route("api/Portfolios/count")]
+        [HttpGet]
+        public HttpResponseMessage Count()
+        {
+            var data = CountService.Numcnt();
+            return Request.CreateResponse(HttpStatusCode.OK, data);
+        }
     }
 }

@@ -34,6 +34,10 @@ namespace DAL
         public static IRepo<JobVacancy, int, JobVacancy> JobVacancyDataAccess()
         {
             return new JobVacancyrepo();
-        }  
+        }
+        public static ICount<int> PortfolioCountDataAccess()
+        {
+            return new PortfolioRepo();
+        }
     }
 }

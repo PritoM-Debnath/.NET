@@ -75,7 +75,7 @@ namespace JobProject.Controllers
                 }
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ModelState);
             }
-            catch (Exception ex)
+            catch (Exception ex) 
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }

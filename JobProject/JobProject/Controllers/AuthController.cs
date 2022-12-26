@@ -27,7 +27,16 @@ namespace JobProject.Controllers
         [HttpGet]
         public HttpResponseMessage LogoutProvider()
         {
-            var token = Request.Headers.Authorization.ToString();
+            string token = null;
+            try
+            {
+                 token = Request.Headers.Authorization.ToString();
+                
+            }
+            catch (NullReferenceException ex)
+            {
+                return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
+            }
             if (token != null)
             {
                 var result = AuthService.LogoutProvider(token);

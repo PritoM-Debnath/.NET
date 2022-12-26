@@ -1,10 +1,12 @@
 ﻿using BLL.DTO;
 using BLL.Services;
+using JobProject.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Runtime.CompilerServices;
 using System.Web.Http;
 
 namespace JobProject.Controllers
@@ -13,6 +15,7 @@ namespace JobProject.Controllers
     {
         [Route("api/jobSeekers")]
         [HttpGet]
+        [CustomAuthSeeker]
         public HttpResponseMessage Get()
         {
             try

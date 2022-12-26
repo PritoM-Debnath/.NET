@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class PortfolioRepo : IRepo<Portfolio, int, Portfolio>
+    internal class PortfolioRepo : IRepo<Portfolio, int, Portfolio>, ICount<int>
     {
         JOBEntities db;
         internal PortfolioRepo()
@@ -37,12 +37,16 @@ namespace DAL.Repo
         {
             return db.Portfolios.Find(id);
         }
-
         public bool Update(Portfolio obj)
         {
             var ext = db.Portfolios.Find(obj.Id);
             db.Entry(ext).CurrentValues.SetValues(obj);
             return db.SaveChanges() > 0;
+        }
+        public int NumberCount()
+        {
+            var count = db.Portfolios.Count();
+            return count;
         }
     }
 }

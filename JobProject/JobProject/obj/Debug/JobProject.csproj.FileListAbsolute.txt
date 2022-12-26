@@ -56,8 +56,8 @@ D:\.NET\JobProject\JobProject\bin\Newtonsoft.Json.dll
 D:\.NET\JobProject\JobProject\bin\System.Net.Http.Formatting.dll
 D:\.NET\JobProject\JobProject\bin\System.Web.Http.dll
 D:\.NET\JobProject\JobProject\bin\System.Web.Http.WebHost.dll
-D:\.NET\JobProject\JobProject\bin\DAL.dll
 D:\.NET\JobProject\JobProject\bin\AutoMapper.dll
+D:\.NET\JobProject\JobProject\bin\DAL.dll
 D:\.NET\JobProject\JobProject\bin\EntityFramework.dll
 D:\.NET\JobProject\JobProject\bin\BLL.pdb
 D:\.NET\JobProject\JobProject\bin\Newtonsoft.Json.xml
@@ -65,9 +65,9 @@ D:\.NET\JobProject\JobProject\bin\System.Net.Http.Formatting.xml
 D:\.NET\JobProject\JobProject\bin\System.Web.Http.xml
 D:\.NET\JobProject\JobProject\bin\System.Web.Http.WebHost.xml
 D:\.NET\JobProject\JobProject\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\.NET\JobProject\JobProject\bin\AutoMapper.xml
 D:\.NET\JobProject\JobProject\bin\DAL.pdb
 D:\.NET\JobProject\JobProject\bin\DAL.dll.config
-D:\.NET\JobProject\JobProject\bin\AutoMapper.xml
 D:\.NET\JobProject\JobProject\bin\EntityFramework.xml
 D:\.NET\JobProject\JobProject\obj\Debug\JobProject.csproj.AssemblyReference.cache
 D:\.NET\JobProject\JobProject\obj\Debug\JobProject.csproj.CoreCompileInputs.cache
