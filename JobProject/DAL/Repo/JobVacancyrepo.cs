@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Repo
 {
-    internal class JobVacancyrepo : IRepo<JobVacancy, int, JobVacancy>
+    internal class JobVacancyrepo : IRepo<JobVacancy, int, JobVacancy>, ICount<int>
     {
         JOBEntities db;
         internal JobVacancyrepo()
@@ -36,6 +36,11 @@ namespace DAL.Repo
         public JobVacancy Get(int id)
         {
             return db.JobVacancies.Find(id);
+        }
+
+        public int NumberCount()
+        {
+            return db.JobVacancies.Count(); 
         }
 
         public bool Update(JobVacancy obj)

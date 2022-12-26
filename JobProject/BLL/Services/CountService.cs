@@ -14,5 +14,9 @@ namespace BLL.Services
         
             return DataAccessFactory.PortfolioCountDataAccess().NumberCount();
         }
+        public static int NumcntJobVacancy()
+        {
+            return DataAccessFactory.JobVacancyCountDataAccess().NumberCount();
+        }
     }
 }

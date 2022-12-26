@@ -1,5 +1,6 @@
 ﻿using BLL.DTO;
 using BLL.Services;
+using JobProject.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Web.Http;
 
 namespace JobProject.Controllers
 {
+    [CustomAuth]
     public class JobVacancyController : ApiController
     {
         [Route("api/jobVacancies")]
@@ -102,6 +104,13 @@ namespace JobProject.Controllers
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
             }
+        }
+        [Route("api/jobvacancies/count")]
+        [HttpGet]
+        public HttpResponseMessage Count()
+        {
+            var data = CountService.NumcntJobVacancy();
+            return Request.CreateResponse(HttpStatusCode.OK, data);
         }
     }
 }

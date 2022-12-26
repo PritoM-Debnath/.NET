@@ -11,9 +11,10 @@ using System.Web.Http;
 
 namespace JobProject.Controllers
 {
+    [CustomAuth]
     public class JobProviderController : ApiController
     {
-        [CustomAuth]
+        
         [Route("api/jobproviders")]
         [HttpGet]
         public HttpResponseMessage Get()

@@ -83,7 +83,6 @@
     <Compile Include="Interfaces\ICount.cs" />
     <Compile Include="Interfaces\IRepo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repo\CountRepo.cs" />
     <Compile Include="Repo\JobProviderRepo.cs" />
     <Compile Include="Repo\JobSeekerRepo.cs" />
     <Compile Include="Repo\JobVacancyrepo.cs" />

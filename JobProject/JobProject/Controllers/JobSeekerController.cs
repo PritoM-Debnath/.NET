@@ -11,11 +11,12 @@ using System.Web.Http;
 
 namespace JobProject.Controllers
 {
+    [CustomAuthSeeker]
     public class JobSeekerController : ApiController
     {
         [Route("api/jobSeekers")]
         [HttpGet]
-        [CustomAuthSeeker]
+        
         public HttpResponseMessage Get()
         {
             try

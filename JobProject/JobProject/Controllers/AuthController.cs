@@ -30,22 +30,21 @@ namespace JobProject.Controllers
             string token = null;
             try
             {
-                 token = Request.Headers.Authorization.ToString();
-                
+                token = Request.Headers.Authorization.ToString();
+                if (token != null)
+                {
+                    var result = AuthService.LogoutProvider(token);
+                    if (result)
+                    {
+                        return Request.CreateResponse(HttpStatusCode.OK, "Successfully logged out");
+                    }
+                }
+                return Request.CreateResponse(HttpStatusCode.BadRequest, "Error Logging out");
             }
             catch (NullReferenceException ex)
             {
                 return Request.CreateResponse(HttpStatusCode.BadRequest, ex.Message);
-            }
-            if (token != null)
-            {
-                var result = AuthService.LogoutProvider(token);
-                if (result)
-                {
-                    return Request.CreateResponse(HttpStatusCode.OK, "Successfully logged out");
-                }
-            }
-            return Request.CreateResponse(HttpStatusCode.BadRequest, "Error Logging out");
+            }     
         }
         [Route("api/Login/seeker")]
         [HttpPost]

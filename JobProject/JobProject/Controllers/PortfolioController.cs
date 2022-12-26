@@ -1,5 +1,6 @@
 ﻿using BLL.DTO;
 using BLL.Services;
+using JobProject.Auth;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,7 @@ using System.Web.Http;
 
 namespace JobProject.Controllers
 {
+    [CustomAuthSeeker]
     public class PortfolioController : ApiController
     {
         [Route("api/Portfolios")]

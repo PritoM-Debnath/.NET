@@ -39,5 +39,9 @@ namespace DAL
         {
             return new PortfolioRepo();
         }
+        public static ICount<int> JobVacancyCountDataAccess()
+        {
+            return new JobVacancyrepo();
+        }
     }
 }
