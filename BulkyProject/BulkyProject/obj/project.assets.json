@@ -10515,11 +10515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\VisualStudio\\BulkyProject\\BulkyProject\\BulkyProject.csproj",
+      "projectUniqueName": "F:\\GITHUB\\.NET\\BulkyProject\\BulkyProject\\BulkyProject.csproj",
       "projectName": "BulkyProject",
-      "projectPath": "F:\\VisualStudio\\BulkyProject\\BulkyProject\\BulkyProject.csproj",
+      "projectPath": "F:\\GITHUB\\.NET\\BulkyProject\\BulkyProject\\BulkyProject.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "F:\\VisualStudio\\BulkyProject\\BulkyProject\\obj\\",
+      "outputPath": "F:\\GITHUB\\.NET\\BulkyProject\\BulkyProject\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",

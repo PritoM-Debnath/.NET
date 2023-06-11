@@ -1,30 +1,24 @@
 ﻿@model BulkyProject.Models.Category
 
-@{
-    ViewData["Title"] = "Create";
-}
-
 <h4 class="text-primary">Category</h4>
 <hr />
 <div class="row">
     <div class="col-md-6 row">
-        <form asp-action="Create">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <form asp-action="Delete">
+            <input asp-for="Id" hidden />
             <div class="form-group">
                 <label asp-for="Name" class="p-0"></label>
-                <input asp-for="Name" class="form-control" />
-                <span asp-validation-for="Name" class="text-danger"></span>
+                <input asp-for="Name" disabled class="form-control" />
             </div>
             <div class="form-group">
                 <label asp-for="DisplayOrder" class="control-label"></label>
-                <input asp-for="DisplayOrder" class="form-control" />
-                <span asp-validation-for="DisplayOrder" class="text-danger"></span>
+                <input asp-for="DisplayOrder" disabled class="form-control" />
             </div>
             <div class="row">
                 <div class="col-6 col-md-3 text-end">
                     <div class="form-group pt-2">
-                        <button type="submit" value="Create" class="btn btn-primary" style="width:150px">
-                            Add
+                        <button type="submit" value="Delete" class="btn btn-danger" style="width:150px">
+                            Delete Record
                         </button>
                     </div>
                 </div>
@@ -37,9 +31,5 @@
 </div>
 
 
-@section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
-    @{
-        <partial name="_ValidationScriptsPartial"/>
-    }
-}
+
+
